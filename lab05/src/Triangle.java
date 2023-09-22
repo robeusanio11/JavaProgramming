@@ -15,5 +15,15 @@ class Triangle extends GeometricObject {
     this.side3 = s3;
   }
 
+  public double getPerimeter() {
+    return this.side1+this.side2+this.side3;
+  }
+  public double getArea() {
+    //s(s-a)(s-b)(s-c)
+    // s = (a + b + c)/2.
+    double semiPerim = (this.side1+this.side2+this.side3)/2;
+    return (semiPerim*(semiPerim-this.side1)*(semiPerim-this.side2)*(semiPerim-this.side3));
+  }
+
   // add other methods of triangle ++ getPerimeter/getArea from abstract
 }
