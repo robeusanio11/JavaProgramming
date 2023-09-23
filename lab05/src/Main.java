@@ -8,11 +8,12 @@ public class Main {
         double s3 = input.nextDouble();
         System.out.print("Enter color: ");
         String color = input.next();
-        System.out.println("Is Triangle Filled? (true/false):");
+        System.out.print("Is Triangle Filled? (true/false): ");
         boolean filled = input.nextBoolean();
         Triangle tri = new Triangle(s1, s2, s3);
         tri.setColor(color);
         tri.setFilled(filled);
+        tri.printInfo();
     }
 }
 /*

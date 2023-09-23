@@ -19,8 +19,8 @@ class Triangle extends GeometricObject {
     return this.side1+this.side2+this.side3;
   }
   public double getArea() {
-    double semiPerim = (this.side1+this.side2+this.side3)/2;
-    return (semiPerim*(semiPerim-this.side1)*(semiPerim-this.side2)*(semiPerim-this.side3));
+    double semiPerim = ((this.side1+this.side2+this.side3)/2.0);
+    return Math.sqrt(semiPerim*(semiPerim-this.side1)*(semiPerim-this.side2)*(semiPerim-this.side3));
   }
 
   public double getSide1() {
@@ -40,6 +40,16 @@ class Triangle extends GeometricObject {
   }
   public void setSide3(double s3) {
     this.side1 = s3;
+  }
+
+  public void printInfo() {
+    System.out.println("side 1: " + this.side1);
+    System.out.println("side 2: " + this.side2);
+    System.out.println("side 3: " + this.side3);
+    System.out.println("perimeter: " + this.getPerimeter());
+    System.out.println("area: " + this.getArea());
+    System.out.println("color: " + this.getColor());
+    System.out.println("is filled: " + this.isFilled());
   }
   // add other methods of triangle ++ getPerimeter/getArea from abstract
 }
