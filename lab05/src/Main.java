@@ -1,6 +1,18 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter 3 side lengths:");
+        double s1 = input.nextDouble();
+        double s2 = input.nextDouble();
+        double s3 = input.nextDouble();
+        System.out.print("Enter color: ");
+        String color = input.next();
+        System.out.println("Is Triangle Filled? (true/false):");
+        boolean filled = input.nextBoolean();
+        Triangle tri = new Triangle(s1, s2, s3);
+        tri.setColor(color);
+        tri.setFilled(filled);
     }
 }
 /*
