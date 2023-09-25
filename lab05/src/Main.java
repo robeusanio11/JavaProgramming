@@ -26,10 +26,10 @@ a Triangle object with these sides and set the color and filled properties using
 the input. The program should display the area, perimeter, color, and true or false
 to indicate whether it is filled or not.
 */
-
+package java.lang;
 public class Main {
     public static void main(String[] args) {
-        
+
     }
 }
 
