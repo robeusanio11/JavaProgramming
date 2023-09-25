@@ -1,3 +1,4 @@
+/* QUESTION 1:
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +17,6 @@ public class Main {
         tri.printInfo();
     }
 }
-/*
 (Triangle class) Design a new Triangle class that extends the abstract
 GeometricObject class. Draw the UML diagram for the classes Triangle
 and GeometricObject and then implement the Triangle class. Write a test
@@ -26,6 +26,13 @@ a Triangle object with these sides and set the color and filled properties using
 the input. The program should display the area, perimeter, color, and true or false
 to indicate whether it is filled or not.
 */
+
+public class Main {
+    public static void main(String[] args) {
+        
+    }
+}
+
 
 /*
 (Enable Circle comparable) Rewrite the Circle class in Listing 13.2 to extend
