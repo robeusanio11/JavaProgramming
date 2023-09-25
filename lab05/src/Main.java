@@ -26,10 +26,14 @@ a Triangle object with these sides and set the color and filled properties using
 the input. The program should display the area, perimeter, color, and true or false
 to indicate whether it is filled or not.
 */
-package java.lang;
 public class Main {
     public static void main(String[] args) {
-
+        Circle c1 = new Circle(1, "yellow", true);
+        Circle c2 = new Circle(5, "yellow", true);
+        Circle c3 = new Circle(5, "green", false);
+        System.out.println(c1.equals(c2));
+        System.out.println(c1.equals(c3));
+        System.out.println(c2.equals(c3));
     }
 }
 

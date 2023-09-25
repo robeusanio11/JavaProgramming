@@ -1,4 +1,4 @@
-public class Circle extends GeometricObject {
+public class Circle extends GeometricObject { //implements Comparable<Circle> 
     private double radius;
 
     public Circle() {
@@ -31,6 +31,32 @@ public class Circle extends GeometricObject {
     public void printCircle() {
         System.out.println("The circle is created " + getDateCreated() +
     " and the radius is " + radius);
+    }
+
+    // @Override
+    // public int compareTo(Circle circle) {
+    //     if (this.getRadius() > circle.getRadius()) {
+    //         return 1;
+    //     } else if (this.getRadius() == circle.getRadius()) {
+    //         return 0;
+    //     } else {
+    //         return 1;
+    //     }
+    // }
+
+    // public boolean equals(Circle circle) {
+    //     if (this.compareTo(circle) == 0) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+        public boolean equals(Circle circle) {
+        if (this.getRadius() == circle.getRadius()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
