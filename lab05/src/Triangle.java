@@ -51,5 +51,4 @@ class Triangle extends GeometricObject {
     System.out.println("color: " + this.getColor());
     System.out.println("is filled: " + this.isFilled());
   }
-  // add other methods of triangle ++ getPerimeter/getArea from abstract
 }
