@@ -25,9 +25,25 @@ public static int count(String str, char a)
 prompts the user to enter a string and a character, and displays the number of
 occurrences for the character in the string.
 */
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-    
+
+    }
+
+    public static int findLargestNum(int[] arr, int index) {
+        if (index == arr.length - 1) {
+            return arr[index];
+        } else {
+            int largest = findLargestNum(arr, index + 1);
+            if (arr[index] > largest) {
+                return arr[index];
+            } else {
+                return largest;
+            }
+        }
     }
 }
 /* QUESTION 2:
