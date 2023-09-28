@@ -30,7 +30,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
+        int[] numArr = new int[8];
+        for (int i = 0; i<numArr.length; i++) {
+            System.out.print("Enter a number: ");
+            numArr[i] = input.nextInt();
+        }
+        System.out.println("Largest num: " + findLargestNum(numArr, 0));
     }
 
     public static int findLargestNum(int[] arr, int index) {
