@@ -32,10 +32,9 @@ public abstract class GeometricObject {
     public java.util.Date getDateCreated() {
       return dateCreated;
     }
-    // @Override
-    public String toString() {
-      return "created on " + dateCreated + "\ncolor: " + color +
-    " and filled: " + filled;
+    public void printInfo() {
+      System.out.println("color: " + this.color);
+      System.out.println("is Filled: " + this.filled);
     }
   
     public abstract double getArea();

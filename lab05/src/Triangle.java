@@ -48,7 +48,8 @@ class Triangle extends GeometricObject {
     System.out.println("side 3: " + this.side3);
     System.out.println("perimeter: " + this.getPerimeter());
     System.out.println("area: " + this.getArea());
-    System.out.println("color: " + this.getColor());
-    System.out.println("is filled: " + this.isFilled());
+    // System.out.println("color: " + this.getColor());
+    // System.out.println("is filled: " + this.isFilled());
+    super.printInfo();
   }
 }
