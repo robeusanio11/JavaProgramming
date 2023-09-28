@@ -1,6 +1,16 @@
 public class Main {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        
+    }
+
+    public static int count(String str, char a) {
+        int total = 0;
+        if (str.indexOf(a) == -1) {
+          return total;
+        } else {
+          total++;
+          return total + count(str.substring(str.indexOf(a)+1), a);
+        }
     }
 }
 /* QUESTION 1:
