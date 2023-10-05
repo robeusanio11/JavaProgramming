@@ -1,5 +1,4 @@
-/*  Question 1: 
-public class Main {
+ public class Main {
     public static void main(String[] args) {
         System.out.println(count("Hello World", 'x'));
         System.out.println(count("Hello World", 'l'));
@@ -16,7 +15,7 @@ public class Main {
         }
     }
 }
-*/
+
 /* QUESTION 1:
 (Occurrences of a specified character in a string) Write a recursive method that
 finds the number of occurrences of a specified letter in a string using the following method header:
@@ -25,6 +24,7 @@ public static int count(String str, char a)
 prompts the user to enter a string and a character, and displays the number of
 occurrences for the character in the string.
 */
+/* QUESTION 2:
 
 import java.util.Scanner;
 
@@ -38,7 +38,7 @@ public class Main {
         }
         System.out.println("Largest num: " + findLargestNum(numArr, 0));
     }
-
+    
     public static int findLargestNum(int[] arr, int index) {
         if (index == arr.length - 1) {
             return arr[index];
@@ -52,7 +52,6 @@ public class Main {
         }
     }
 }
-/* QUESTION 2:
 (Find the largest number in an array) Write a recursive method that returns the
 largest integer in an array. Write a test program that prompts the user to enter a
 list of eight integers and displays the largest element.
