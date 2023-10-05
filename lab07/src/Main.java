@@ -1,9 +1,17 @@
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
+/* QUESTION 1: 
+class Main {
+  public static void main(String[] args) {
+    
+    GenericStack<String> stk = new GenericStack<String>();
+
+    stk.push("this");
+    stk.push("stack");
+    stk.push("has");
+    stk.push("five");
+    stk.push("strings");
+    System.out.print(stk.toString());
+  }
 }
-/* QUESTION 1:
 (Implement GenericStack using inheritance) In Listing 19.1, GenericStack is
 implemented using composition. Define a new stack class that extends ArrayList.
 Draw the UML diagram for the classes and then implement GenericStack.
