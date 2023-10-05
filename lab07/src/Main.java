@@ -18,6 +18,13 @@ Draw the UML diagram for the classes and then implement GenericStack.
 Write a test program that prompts the user to enter five strings and displays them in
 reverse order.
 */
+
+class Main {
+  public static void main(String[] args) {
+    
+  }
+  
+}
 /* QUESTION 2:
 (Match grouping symbols) A Java program contains various pairs of grouping
 symbols, such as:
