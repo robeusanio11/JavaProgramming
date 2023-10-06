@@ -18,12 +18,44 @@ Draw the UML diagram for the classes and then implement GenericStack.
 Write a test program that prompts the user to enter five strings and displays them in
 reverse order.
 */
+import java.io.*;
+import java.util.*;
 
 class Main {
   public static void main(String[] args) {
+    File file = new File(args[0]);
+    Stack<Character> symbols = new Stack<>();
+    boolean correct = true;
     
+    try (Scanner fileText = new Scanner(file);) {      
+
+      while (fileText.hasNext()) {
+        String text = fileText.nextLine();
+        for (int i  = 0; i < text.length(); i++) {
+          char ch = text.charAt(i);
+          if (ch == '(' || ch == '{' || ch == '[') {
+            symbols.push(ch);
+          } else if (ch == ')' || ch == '}' || ch == ']') {
+            if ((symbols.peek() == '(' && ch == ')') || 
+              (symbols.peek() == '[' && ch == ']') ||
+              (symbols.peek() == '{' && ch == '}')) {
+              symbols.pop();
+            } else {
+              correct = false;
+              break;
+            }
+          }
+      }
+      }
+    } catch (Exception e) {
+      System.out.print(e);
+    }
+    if (correct) {
+      System.out.print("correct pairs");
+    } else {
+      System.out.print("incorrect pairs");
+    }
   }
-  
 }
 /* QUESTION 2:
 (Match grouping symbols) A Java program contains various pairs of grouping
