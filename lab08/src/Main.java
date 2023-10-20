@@ -1,6 +1,19 @@
+import java.util.LinkedHashSet;
+
 public class Main {
     public static void main(String[] args) {
-        
+        LinkedHashSet<String> hs1 = new LinkedHashSet<>();
+        hs1.add("George");
+        hs1.add("Jim");
+        hs1.add("Blake");
+        hs1.add("Kevin");
+        hs1.add("Michael");
+        LinkedHashSet<String> hs2 = new LinkedHashSet<>();
+        hs2.add("George");
+        hs2.add("Katie");
+        hs2.add("Kevin");
+        hs2.add("Michelle");
+        hs2.add("Ryan");
     }
 }
 
