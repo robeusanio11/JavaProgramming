@@ -24,6 +24,12 @@ public class Main {
 these set methods.)
  */
 /* QUESTION 2
+
+import java.util.LinkedHashSet;
+public class Main {
+    public static void main(String[] args) {
+    }   
+}
 (Count the occurrences of numbers entered) Write a program that reads an
 unspecified number of integers and finds the one that has the most occurrences.
 The input ends when the input is 0. For example, if you entered 2 3 40 3 5 4 –3
