@@ -1,3 +1,4 @@
+/* QUESTION 1
 import java.util.*;
 class Main {
   public static void main(String[] args) {
@@ -28,19 +29,38 @@ class Main {
   }
 }
 
-/* QUESTION 1
 (Perform set operations on hash sets) Create two linked hash sets {"George",
 "Jim", "John", "Blake", "Kevin", "Michael"} and {"George", "Katie",
 "Kevin", "Michelle", "Ryan"} and find their union, difference, and intersection. (You can clone the sets to preserve the original sets from being changed by
 these set methods.)
  */
-/* QUESTION 2
 
-import java.util.LinkedHashSet;
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Map<Integer, Integer> numMap = new HashMap<>();
+        System.out.print("Enter list of ints: ");
+        int key = input.nextInt();
+        while (key != 0) {
+            if (numMap.containsKey(key)) {
+                int freq = numMap.get(key)+1;
+                numMap.put(key, freq);
+            } else {
+                numMap.put(key, 1);
+            }
+            key = input.nextInt();
+        }
+        Object maxVal = Collections.max(numMap.values());
+
+        for (Map.Entry<Integer, Integer> entry : numMap.entrySet()) {
+            if (maxVal == entry.getValue()) {
+                System.out.print(entry.getKey() + " ");
+            }
+        }
     }   
 }
+/* QUESTION 2
 (Count the occurrences of numbers entered) Write a program that reads an
 unspecified number of integers and finds the one that has the most occurrences.
 The input ends when the input is 0. For example, if you entered 2 3 40 3 5 4 –3
