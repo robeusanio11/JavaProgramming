@@ -1,20 +1,31 @@
-import java.util.LinkedHashSet;
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+    LinkedHashSet<String> hs1 = new LinkedHashSet<>();
+    hs1.add("George");
+    hs1.add("Jim");
+    hs1.add("Blake");
+    hs1.add("Kevin");
+    hs1.add("Michael");
+    LinkedHashSet<String> hs2 = new LinkedHashSet<>();
+    hs2.add("George");
+    hs2.add("Katie");
+    hs2.add("Kevin");
+    hs2.add("Michelle");
+    hs2.add("Ryan");
 
-public class Main {
-    public static void main(String[] args) {
-        LinkedHashSet<String> hs1 = new LinkedHashSet<>();
-        hs1.add("George");
-        hs1.add("Jim");
-        hs1.add("Blake");
-        hs1.add("Kevin");
-        hs1.add("Michael");
-        LinkedHashSet<String> hs2 = new LinkedHashSet<>();
-        hs2.add("George");
-        hs2.add("Katie");
-        hs2.add("Kevin");
-        hs2.add("Michelle");
-        hs2.add("Ryan");
-    }
+    LinkedHashSet<String> hs3 = new LinkedHashSet<>(hs1);
+    hs3.addAll(hs2);
+    System.out.println("union: " + hs3);
+    
+    LinkedHashSet<String> hs4 = new LinkedHashSet<>(hs1);
+    hs4.removeAll(hs2);
+    System.out.println("difference: " + hs4);
+
+    LinkedHashSet<String> hs5 = new LinkedHashSet<>(hs1);
+    hs5.retainAll(hs2);
+    System.out.println("intersection: " + hs5);
+  }
 }
 
 /* QUESTION 1
