@@ -3,3 +3,6 @@ public class Main {
 
     }
 }
+/* #22.6 (Bin packing with smallest object)
+ * 
+ */
