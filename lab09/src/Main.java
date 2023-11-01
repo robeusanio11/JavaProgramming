@@ -3,17 +3,17 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the number of objects: ");
+        System.out.print("Enter the number of objects: ");
         final int SIZE = input.nextInt();
         List<Integer> numList = new ArrayList<Integer>(SIZE);
-        System.out.println("Enter the weights of the objects: ");
+        System.out.print("Enter the weights of the objects: ");
         for (int i = 0; i < SIZE; i++) {
             numList.add(input.nextInt());
         }
         Collections.sort(numList, Collections.reverseOrder());
         List<List<Integer>> containers = new ArrayList<>();
         for(int num : numList) {
-            boolean placed = false;
+            boolean fits = false;
             for (List<Integer> container : containers) {
                 int totalWeight = 0;
                 for (int weight : container) {
@@ -21,54 +21,25 @@ public class Main {
                 }
                 if (totalWeight+num <= 10) {
                     container.add(num);
-                    placed = true;
+                    fits = true;
                     break;
                 }
             }
-            if (!placed) {
+            if (!fits) {
                 List<Integer> newContainer = new ArrayList<>();
                 newContainer.add(num);
                 containers.add(newContainer);
             }
         }
 
+        for (int i = 0; i < containers.size(); i++) {
+            System.out.print("\nContainer " + (i + 1) + " contains objects with weight ");
+            List<Integer> container = containers.get(i);
+            for (int j = 0; j < container.size(); j++) {
+                System.out.print(container.get(j) + " ");
+            }
+        }
     }
-
-
-    // public static int packObjects(List<Integer> objects, int index, List<Integer> bins) {
-    //     if (index == objects.size()) {
-    //         return bins.size(); // All objects are packed, return the number of bins used
-    //     }
-
-    //     int object = objects.get(index);
-
-    //     // Try to place the object in existing bins
-    //     for (int i = 0; i < bins.size(); i++) {
-    //         if (bins.get(i) + object <= 10) {
-    //             bins.set(i, bins.get(i) + object);
-    //             int result = packObjects(objects, index + 1, bins);
-    //             bins.set(i, bins.get(i) - object); // Backtrack
-    //             return result;
-    //         }
-    //     }
-
-    //     // If the object doesn't fit in existing bins, create a new bin
-    //     bins.add(object);
-    //     int result = packObjects(objects, index + 1, bins);
-    //     bins.remove(bins.size() - 1); // Backtrack
-    //     return result;
-    // }
-
-    // public static int findMinContainers(List<Integer> objects) {
-    //     List<Integer> bins = new ArrayList<>();
-    //     return packObjects(objects, 0, bins);
-    // }
-
-    // public static void main(String[] args) {
-    //     List<Integer> objects = List.of(7, 5, 2, 3, 5, 8);
-    //     int minContainers = findMinContainers(objects);
-    //     System.out.println("Minimum number of containers needed: " + minContainers);
-    // }
 }
 
 /* #22.6 (Bin packing with smallest object) The bin packing problem is to pack the
