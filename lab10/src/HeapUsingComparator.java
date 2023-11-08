@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.*;
 
 public class HeapUsingComparator<E> {
     private ArrayList<E> list = new ArrayList<>();

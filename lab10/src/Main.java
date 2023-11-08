@@ -2,9 +2,9 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] list2 = {-44, -5, -3, 3, 3, 1, -4, 0, 1, 2, 4, 5, 53};
-        heapSort(list2, (o1, o2) -> o1 - o2);
-        System.out.println(Arrays.toString(list2));
+        Integer[] numList = {1, 10, 11, 6, 3, 100, 49, 11, 20, -3};
+        heapSort(numList, (a, b) -> a - b);
+        System.out.println(Arrays.toString(numList));
     }
 
     public static <E> void heapSort(E[] list, Comparator<? super E> comparator)
