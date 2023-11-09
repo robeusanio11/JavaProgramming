@@ -1,3 +1,4 @@
+/* #23.9 (Generic Heap using Comparator)
 import java.util.*;
 
 public class Main {
@@ -32,7 +33,7 @@ public class Main {
     }
 }
 
-/* #23.9 (Generic Heap using Comparator)
+
 Revise Heap in Listing 23.9, using a generic
 parameter and a Comparator for comparing objects. Define a new constructor
 with a Comparator as its argument as follows:

@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-
+    
     }
 }
 /* #24.6 (Generic PriorityQueue using Comparator) Revise MyPriorityQueue
