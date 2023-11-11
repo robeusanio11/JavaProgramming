@@ -3,7 +3,7 @@ public class Main {
         PriorityQueueUsingSortedArrayList<Integer> pq1 = new PriorityQueueUsingSortedArrayList<>();
         MyPriorityQueue<Integer> pq2 = new MyPriorityQueue<>();
 
-        long pq1Start = System.currentTimeMillis();
+        long pq2Start = System.currentTimeMillis();
         for (int i=0; i<5000000; i++) {
             pq2.enqueue((int) Math.random()*100);
         }
@@ -11,8 +11,8 @@ public class Main {
         while (pq2.getSize() > 0) {
             pq2.dequeue();
         }
-        long pq1End = System.currentTimeMillis();
-        System.out.print("Total time pq1: " + (pq1End-pq1Start));
+        long pq2End = System.currentTimeMillis();
+        System.out.print("Total time pq1: " + (pq2End-pq2Start));
     }
 }
 /* #24.6
