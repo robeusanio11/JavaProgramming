@@ -8,8 +8,11 @@ public class PriorityQueueUsingSortedArrayList<E extends Comparable<E>> {
     }
 
     public void enqueue(E e) {
-        list.add(e);
-        Collections.sort(list);
+        int index = 0;
+        while ((index < list.size()) && (e.compareTo(list.get(index)) > 0)) {
+            index++;
+        } 
+        list.add(index, e);
     }
 
     public E dequeue() {
