@@ -1,27 +1,31 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         PriorityQueueUsingSortedArrayList<Integer> pq1 = new PriorityQueueUsingSortedArrayList<>();
         MyPriorityQueue<Integer> pq2 = new MyPriorityQueue<>();
+        ArrayList<Integer> numList = new ArrayList<>();
 
+        for (int i=0; i<5000000; i++) {
+            numList.add((int) Math.random()*100);
+        }
+        
         long pq2Start = System.currentTimeMillis();
-        for (int i=0; i<500000; i++) {
+        for (int i=0; i<numList.size(); i++) {
             pq2.enqueue((int) Math.random()*100);
         }
-        System.out.print("enqueued");
+        System.out.println("enqueued");
         while (pq2.getSize() > 0) {
             pq2.dequeue();
         }
         long pq2End = System.currentTimeMillis();
-        System.out.print("Total time pq1: " + (pq2End-pq2Start));
-
-
-
+        System.out.println("Total time pq2: " + (pq2End-pq2Start));
 
         long pq1Start = System.currentTimeMillis();
-        for (int i=0; i<500000; i++) {
+        for (int i=0; i<numList.size(); i++) {
             pq1.enqueue((int) Math.random()*100);
         }
-        System.out.print("enqueued");
+        System.out.println("enqueued");
         while (pq1.getSize() > 0) {
             pq1.dequeue();
         }
