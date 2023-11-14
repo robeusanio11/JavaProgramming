@@ -9,28 +9,26 @@ public class Main {
         for (int i=0; i<5000000; i++) {
             numList.add((int) Math.random()*100);
         }
-        
-        long pq2Start = System.currentTimeMillis();
-        for (int i=0; i<numList.size(); i++) {
-            pq2.enqueue((int) Math.random()*100);
-        }
-        System.out.println("enqueued");
-        while (pq2.getSize() > 0) {
-            pq2.dequeue();
-        }
-        long pq2End = System.currentTimeMillis();
-        System.out.println("Total time pq2: " + (pq2End-pq2Start));
 
         long pq1Start = System.currentTimeMillis();
         for (int i=0; i<numList.size(); i++) {
-            pq1.enqueue((int) Math.random()*100);
+            pq1.enqueue(numList.get(i));
         }
-        System.out.println("enqueued");
         while (pq1.getSize() > 0) {
             pq1.dequeue();
         }
         long pq1End = System.currentTimeMillis();
-        System.out.print("Total time pq1: " + (pq1End-pq1Start));
+        System.out.println("Total time Priority Queue 1(ArrayList): " + (pq1End-pq1Start));
+        
+        long pq2Start = System.currentTimeMillis();
+        for (int i=0; i<numList.size(); i++) {
+            pq2.enqueue(numList.get(i));
+        }
+        while (pq2.getSize() > 0) {
+            pq2.dequeue();
+        }
+        long pq2End = System.currentTimeMillis();
+        System.out.println("Total time Priority Queue 2(Heap): " + (pq2End-pq2Start));
     }
 }
 /* #24.6
