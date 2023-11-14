@@ -7,7 +7,8 @@ public class Main {
         ArrayList<Integer> numList = new ArrayList<>();
 
         for (int i=0; i<5000000; i++) {
-            numList.add((int) Math.random()*100);
+            int rand = (int) (Math.random()*100);
+            numList.add(rand);
         }
 
         long pq1Start = System.currentTimeMillis();
