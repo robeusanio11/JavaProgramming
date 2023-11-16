@@ -1,3 +1,4 @@
+/* #24.6
 import java.util.ArrayList;
 
 public class Main {
@@ -6,7 +7,7 @@ public class Main {
         MyPriorityQueue<Integer> pq2 = new MyPriorityQueue<>();
         ArrayList<Integer> numList = new ArrayList<>();
 
-        for (int i=0; i<5000000; i++) {
+        for (int i=0; i<500000; i++) {
             int rand = (int) (Math.random()*100);
             numList.add(rand);
         }
@@ -32,7 +33,7 @@ public class Main {
         System.out.println("Total time Priority Queue 2(Heap): " + (pq2End-pq2Start));
     }
 }
-/* #24.6
+
 (Revise MyPriorityQueue) Listing 24.8, uses a heap to implement the priority
 queue. Revise the implementation using a sorted array list to store the elements and
 name the new class PriorityQueueUsingSortedArrayList. The elements
