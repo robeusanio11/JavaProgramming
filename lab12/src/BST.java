@@ -1,22 +1,20 @@
-import java.util.Stack;
-
-public class BSTstack<E> implements Tree<E> {
+public class BST<E> implements Tree<E> {
   protected TreeNode<E> root;
   protected int size = 0;
   protected java.util.Comparator<E> c; 
 
-  /** Create a default BSTstack with a natural order comparator */
-  public BSTstack() {
+  /** Create a default BST with a natural order comparator */
+  public BST() {
     this.c = (e1, e2) -> ((Comparable<E>)e1).compareTo(e2);
   }
 
-  /** Create a BSTstack with a specified comparator */
-  public BSTstack(java.util.Comparator<E> c) {
+  /** Create a BST with a specified comparator */
+  public BST(java.util.Comparator<E> c) {
     this.c = c;
   }
 
   /** Create a binary tree from an array of objects */
-  public BSTstack(E[] objects) {
+  public BST(E[] objects) {
     this.c = (e1, e2) -> ((Comparable<E>)e1).compareTo(e2);
     for (int i = 0; i < objects.length; i++)
       add(objects[i]);
@@ -102,49 +100,17 @@ public class BSTstack<E> implements Tree<E> {
     System.out.print(root.element + " ");
   }
 
-//   @Override // Entry point
-//   public void preorder () {
-//     preorder(root);
-//   }
-
-//   protected void preorder(TreeNode<E> root) {
-//     if (root == null) return;
-    
-//     Stack<TreeNode<E>> stack = new Stack<>();
-//     stack.push(root);
-
-//     while (!stack.isEmpty()) {
-//         TreeNode<E> current = stack.pop();
-//         System.out.print(current.element + " ");
-
-//         if (current.right != null) {
-//             stack.push(current.right);
-//         }
-
-//         if (current.left != null) {
-//             stack.push(current.left);
-//         }
-//     }
-//   }
+  @Override /** Preorder traversal from the root */
   public void preorder() {
-    TreeNode<E> root = this.root;
+    preorder(root);
+  }
+
+  /** Preorder traversal from a subtree */
+  protected void preorder(TreeNode<E> root) {
     if (root == null) return;
-    
-    Stack<TreeNode<E>> stack = new Stack<>();
-    stack.push(root);
-
-    while (!stack.isEmpty()) {
-        TreeNode<E> current = stack.pop();
-        System.out.print(current.element + " ");
-
-        if (current.right != null) {
-            stack.push(current.right);
-        }
-
-        if (current.left != null) {
-            stack.push(current.left);
-        }
-    }
+    System.out.print(root.element + " ");
+    preorder(root.left);
+    preorder(root.right);
   }
 
   /** This inner class is static, because it does not access 
