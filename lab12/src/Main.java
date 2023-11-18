@@ -5,7 +5,6 @@ public class Main {
         Scanner input = new Scanner (System.in);
         BST<Integer> recursionBST = new BST<>();
         BSTstack<Integer> stackBST = new BSTstack<>();
-        ArrayList<Integer> arr = new ArrayList<>();
         
         System.out.println("Enter 10 integers: ");
         for (int i = 0; i < 10; i++) {
