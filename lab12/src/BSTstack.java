@@ -76,17 +76,24 @@ public class BSTstack<E> implements Tree<E> {
     return new TreeNode<>(e);
   }
 
-  @Override /** Inorder traversal from the root */
+  /** Inorder traversal from the root */
   public void inorder() {
-    inorder(root);
-  }
-
-  /** Inorder traversal from a subtree */
-  protected void inorder(TreeNode<E> root) {
+    TreeNode<E> root = this.root;
     if (root == null) return;
-    inorder(root.left);
-    System.out.print(root.element + " ");
-    inorder(root.right);
+    
+    Stack<TreeNode<E>> stack = new Stack<>();
+    TreeNode<E> current = root;
+
+    while (!stack.isEmpty() || current != null) {
+      while (current != null) {
+          stack.push(current);
+          current = current.left;
+      }
+      current = stack.pop();
+      System.out.print(current.element + " ");
+      current = current.right;
+  }
+    
   }
 
   @Override /** Postorder traversal from the root */
