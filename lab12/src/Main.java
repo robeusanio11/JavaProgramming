@@ -1,3 +1,8 @@
+/* 25.4 (Implement preorder traversal without using recursion) Implement the pre-
+ * order method in BST using a stack instad of recursion, Write a test program
+ * that prompts the user to enter 10 integers, stores them in a BST, and invokes the 
+ * preorder method to display the elements. INORDER
+
 import java.util.*;
 
 public class Main {
@@ -22,10 +27,7 @@ public class Main {
         stackBST.inorder();
     }
 }
-/* (Implement preorder traversal without using recursion) Implement the pre-
- * order method in BST using a stack instad of recursion, Write a test program
- * that prompts the user to enter 10 integers, stores them in a BST, and invokes the 
- * preorder method to display the elements. INORDER
+
  * 
  */
 
